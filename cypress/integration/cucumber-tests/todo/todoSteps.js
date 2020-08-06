@@ -1,15 +1,20 @@
 import {Given, Then, When} from "cypress-cucumber-preprocessor/steps"
+import todoPage from "./todoPage";
+const TODO_LIST = ["Buy some eggs!", "Tidy the kitchen", "Mow the grass"]
 
 Given('I am on the todo app', () => {
-    cy.visit('http://127.0.0.1:8888/#/')
+    todoPage.visitTodo()
 })
 
 When('I add a new task', () => {
-    cy.get('.new-todo').clear()
-    cy.get('.new-todo').type("Buy some eggs! {enter}")
+    todoPage.addTask()
 
 })
 
 Then('the new task should be on the list', () => {
     cy.get('.view').contains('Buy some eggs!')
+})
+
+Then('I add multiple new tasks', () => {
+    todoPage.addTasks(TODO_LIST)
 })
