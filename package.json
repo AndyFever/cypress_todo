@@ -1,0 +1,26 @@
+{
+  "name": "bdd-test",
+  "version": "1.0.0",
+  "description": "Test Cypress",
+  "main": "index.js",
+  "scripts": {
+    "cy:open": "cypress open",
+    "start": "http-server -p 8888 -c-1",
+    "cy:tests": "cypress run",
+    "dev": "start-test 8888 cypress"
+  },
+  "keywords": [
+    "Cypress",
+    "BDD"
+  ],
+  "author": "Andy Fever",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^4.12.1",
+    "cypress-cucumber-preprocessor": "^2.5.4",
+    "http-server": "^0.12.3"
+  },
+  "cypress-cucumber-preprocessor": {
+    "nonGlobalStepDefinitions": true
+  }
+}
