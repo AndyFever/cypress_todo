@@ -9,4 +9,4 @@ Feature: Complete task
     Given I have a task to do
     When I complete the task
     And I clear all completed task
-    Then I shouldn't have the task on the todo list
+    Then I shouldnt have the task on the todo list

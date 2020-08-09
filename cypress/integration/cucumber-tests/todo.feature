@@ -9,7 +9,7 @@ Feature: Add new tasks to the todo list
     When I add a new task
     Then the new task should be on the list
 
-  Scenario: Add multiple tasks to my todo list
+  Scenario: Add multpile tasks to my todo list
     Given I am on the todo app
     When I add multiple new tasks
     Then the new task should be on the list
