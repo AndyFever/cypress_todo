@@ -1,4 +1,4 @@
-const url = 'http://127.0.0.1:8888/#/'
+const url = 'http://todomvc.com/examples/react/#/'
 const TODO_BOX = '.new-todo'
 const TODO_VIEW = '.view'
 const CLEAR_TASK = '.clear-completed'
