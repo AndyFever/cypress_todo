@@ -2,6 +2,10 @@
 
 This is a quick demo built against the todo app found here: http://todomvc.com/examples/react/#/
 
+To install:
+
+```npm install```
+
 If you are testing a local instance of the app then: 
 
 * To start the webserver
