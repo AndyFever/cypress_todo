@@ -3,6 +3,7 @@ import todoPage from "./todoPage";
 const TODO_LIST = ["Buy some eggs!", "Tidy the kitchen", "Mow the grass"]
 
 Given('I am on the todo app', () => {
+    cy.viewport('iphone-x')
     todoPage.visitTodo()
 })
 

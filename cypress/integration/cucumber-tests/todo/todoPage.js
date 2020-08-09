@@ -6,7 +6,7 @@ const CLEAR_TASK = '.clear-completed'
 class todoPage {
 
     static visitTodo() {
-        cy.visit('http://127.0.0.1:8888/#/')
+        cy.visit(url)
     }
 
     static addTask() {
