@@ -1,7 +1,7 @@
 name: Cypress Tests
 on: 
   push:
-    brahces: [ master ]
+    branches: [ master ]
 jobs:
   application-test:
     runs-on: ubuntu-16.04
@@ -11,5 +11,4 @@ jobs:
       - name: Build Tests
         run: npm install
       - name: Run Cypress
-        run: npm run cytest
-        
+        run: npm run cytest:chrome
