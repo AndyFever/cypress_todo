@@ -8,8 +8,8 @@ jobs:
         run: npm install
       - name: Application Run
         run: npm run start
-    application-test:
-        runs-on: ubuntu-16.04
-        steps:
-            - name: Run Cypress
-            run: npm run cytests
+  application-test:
+    runs-on: ubuntu-16.04
+    steps:
+      - name: Run Cypress
+        run: npm run cytests
