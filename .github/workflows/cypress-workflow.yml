@@ -1,11 +1,13 @@
 name: Cypress Tests
-on: [push]
+on: 
+  push:
+    brahces: [ master ]
 jobs:
   application-build:
     runs-on: ubuntu-16.04
     steps:
       - name: Checkout
-        uses: actions/checkout@AndyFever/cypress_todo
+        uses: actions/checkout@v2
       - name: Application Build
         run: npm install
       - name: Application Run
