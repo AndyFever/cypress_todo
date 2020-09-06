@@ -3,7 +3,7 @@ on:
   push:
     brahces: [ master ]
 jobs:
-  application-build:
+  application-build-and-test:
     runs-on: ubuntu-16.04
     steps:
       - name: Checkout
@@ -12,17 +12,11 @@ jobs:
         run: npm install
       - name: Application Run
         run: npm run start
-  application-test:
-    runs-on: ubuntu-16.04
-    steps:
-      - name: Sleep for 40 seconds
-        uses: jakejarvis/wait-action@master
-        with: 
-          time: '40s'
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build Tests
         run: npm install
       - name: Run Cypress
         run: npm run cytest
+      
         
