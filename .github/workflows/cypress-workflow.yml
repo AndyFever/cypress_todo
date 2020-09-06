@@ -17,8 +17,8 @@ jobs:
     steps:
       - name: Sleep for 120 seconds
         uses: jakejarvis/wait-action@master
-        with:
-        time: '120s'
+        with: 
+          time: '120s'
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run Cypress
