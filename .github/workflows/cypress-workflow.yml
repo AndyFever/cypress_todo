@@ -15,5 +15,8 @@ jobs:
   application-test:
     runs-on: ubuntu-16.04
     steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Run Cypress
         run: npm run cytests
+        wait-on: 'http://192.168.0.21:8888'
