@@ -5,7 +5,7 @@ jobs:
     runs-on: ubuntu-16.04
     steps:
       - name: Checkout
-        uses: actions/checkout@basic-version   
+        uses: actions/checkout
       - name: Application Build
         run: npm install
       - name: Application Run
