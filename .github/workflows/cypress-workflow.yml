@@ -11,5 +11,5 @@ jobs:
       - name: Build Tests
         run: npm install
       - name: Run Cypress
-      run: npm run test:chrome
-      continue-on-error: true
+        run: npm run test:chrome
+        continue-on-error: true
