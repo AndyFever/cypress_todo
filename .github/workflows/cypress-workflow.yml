@@ -15,14 +15,14 @@ jobs:
   application-test:
     runs-on: ubuntu-16.04
     steps:
-      - name: Sleep for 60 seconds
+      - name: Sleep for 40 seconds
         uses: jakejarvis/wait-action@master
         with: 
-          time: '120s'
+          time: '40s'
       - name: Checkout
         uses: actions/checkout@v2
       - name: Build Tests
         run: npm install
       - name: Run Cypress
-        run: npm run cytests
+        run: npm run cytest
         
