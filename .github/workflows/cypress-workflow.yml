@@ -19,6 +19,11 @@ jobs:
         run: |
           mkdir public
           cp -r cypress/videos public/videos
+      
+      - name: Sleep for 10 seconds
+          uses: jakejarvis/wait-action@master
+          with:
+            time: '10s'    
 
       - name: Merge test results into one
         run: npm run report:merge
