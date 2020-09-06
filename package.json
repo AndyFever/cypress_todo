@@ -6,7 +6,7 @@
   "scripts": {
     "cy:open": "cypress open",
     "start": "http-server -p 8888 -c-1",
-    "cy:tests": "cypress run",
+    "cytest": "cypress run",
     "dev": "start-test 8888 cypress"
   },
   "keywords": [
