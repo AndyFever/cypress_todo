@@ -5,9 +5,12 @@
   "main": "index.js",
   "scripts": {
     "cy:open": "cypress open",
+    "test:chrome": "cypress run --browser chrome",
     "start": "http-server -p 8888 -c-1",
     "cytest": "cypress run",
-    "dev": "start-test 8888 cypress"
+    "dev": "start-test 8888 cypress",
+    "report:merge": "mochawesome-merge cypress/results/json/*.json > index.json",
+    "report:generate": "marge index.json --reportDir public --assetsDir public/assets --reportPageTitle index.html"
   },
   "keywords": [
     "Cypress",
@@ -22,5 +25,11 @@
   },
   "cypress-cucumber-preprocessor": {
     "nonGlobalStepDefinitions": true
+  },
+  "devDependencies": {
+    "cypress-multi-reporters": "^1.4.0",
+    "mocha": "^8.1.3",
+    "mochawesome": "^6.1.1",
+    "mochawesome-merge": "^4.1.0"
   }
 }
