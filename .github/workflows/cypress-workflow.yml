@@ -16,6 +16,10 @@ jobs:
   application-test:
     runs-on: ubuntu-16.04
     steps:
+      - name: Sleep for 120 seconds
+        uses: jakejarvis/wait-action@master
+        with:
+        time: '120s'
       - name: Checkout
         uses: actions/checkout@v2
       - name: Run Cypress
