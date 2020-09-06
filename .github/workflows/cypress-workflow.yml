@@ -14,3 +14,23 @@ jobs:
       - name: Run Cypress
         run: npm run test:chrome
         continue-on-error: true
+
+      - name: Copy test execution videos
+        run: |
+          mkdir public
+          cp -r cypress/videos public/videos
+
+      - name: Merge test results into one
+          run: npm run report:merge
+
+      - name: Generate HTML report
+          run: npm run report:generate    
+
+      - name: Deploy report page
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./public
+          user_name: 'AndyFever'
+          user_email: 'andy.fever@gmail.com'
+        
