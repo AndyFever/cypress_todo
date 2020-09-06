@@ -3,9 +3,6 @@ on:
   push:
     brahces: [ master ]
 jobs:
-  application-build:
-    runs-on: ubuntu-16.04
-    steps:
   application-test:
     runs-on: ubuntu-16.04
     steps:
